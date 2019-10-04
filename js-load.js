@@ -1,15 +1,12 @@
-/* 
-The design objectives of js-load.js are to let the developer
-- change functionality without having to deploy to the main site
-- change servers without having to change anyting on the main site. The only file that needs to be placed on fixed server, under the control of the develper, is js-load.js
-*/
-// change this to retrieve scripts from another server
-var ROOT= location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
-var SCRIPT_ROOT=ROOT+"/maps/";
-var MAP_ROOT=ROOT;
+//var MAP_ROOT="http://pum.project-online.se";
+//var MAP_ROOT="http://cristi5.ddns.net";
+var MAP_ROOT="https://proiecte.strainu.ro";
 
-if(scriptName=="_imgur.js")
-    SCRIPT_ROOT=MAP_ROOT+"/imgur/";
+var SCRIPT_ROOT=MAP_ROOT+"/API/";
+
+
+//if(scriptName=="_imgur.js")
+//  SCRIPT_ROOT=MAP_ROOT+"/imgur/";
 
 if (!String.prototype.endsWith) {
   String.prototype.endsWith = function(searchString, position) {
